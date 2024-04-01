@@ -1,48 +1,102 @@
-# DOCKER IMAGE FOR PYTHON/NODEJS SCRIPTS
+# DOCKER IMAGE FOR LOCAL GANACHE NODE
 
-Docker environment for python/nodejs scripts
+Docker environment for ganache
 
 ## Installation
 
 1) Clone the repository
 ```
-git clone https://github.com/ground-creative/docker-scripts-runner
-```
-2) Create a folder named volume and store your code there
-```
-mkdir volume
+git clone https://github.com/ground-creative/docker-ganache-node.git
 ```
 
-3) Change environment variables in env.sample file and rename it to .env
+2) Change environment variables in env.sample file and rename it to .env
 
 ## Usage
 
 ```
-docker compose --project-name=test up -d
+docker compose --project-name=ganache up -d
 ```
 Or
 ```
-docker compose --project-name=test up -d --build
+docker compose --project-name=ganache up -d --build
 ```
 
-### Command Environment Variables
+## Command Environment Variables
 
 It's possible to override environmet variable file while starting or building a container
-
-| Command | Description |
-| ------------- | ------------- |
-| CONTAINER_NAME | Container name |
-| TEST | Keeps the container running and ignores any startup commands |
-| DOCKER_IMAGE | Which image to use |
-| COMMAND | Run startup command |
-| VOLUME | Which volume to use |
-| WORK_DIR | Container working directory |
-| DOCKER_FILE | Docker build file |
-| TIMEZONE | server timezone |
-| LOG_DRIVER | log driver |
-| RESTART | docker restart options |
-
-### Example usage
 ```
 TEST=true COMMAND="tail -f /dev/null" docker compose --project-name=test up -d
 ```
+
+## View Logs
+```
+tail -f logs/output.log
+```
+
+## Etherium Test Addresses
+
+Available Accounts
+==================
+(0) 0x959FD7Ef9089B7142B6B908Dc3A8af7Aa8ff0FA1 (1000 ETH)
+(1) 0x4E90a36B45879F5baE71B57Ad525e817aFA54890 (1000 ETH)
+(2) 0xb6A8490101a0521677B66866B8052eE9f9975C17 (1000 ETH)
+(3) 0xB0201641d9b936eB20155a38439Ae6AB07d85Fbd (1000 ETH)
+(4) 0x301E1528bAD61177eF8Ff89bD4ad6760581e5409 (1000 ETH)
+(5) 0x453460d66EbDe5f888F999255F9291f1CaA83e5b (1000 ETH)
+(6) 0x21A0FAD034Cc95891006E0687892c3434c59521D (1000 ETH)
+(7) 0x53AF25e00Ef5A4a9b0f4c2431bd07a2d18ed5B8b (1000 ETH)
+(8) 0xB73614389f815B78217052984D5561BAd52a420a (1000 ETH)
+(9) 0x35E13C4870077F4610B74F23e887cbB10e21C19f (1000 ETH)
+(10) 0x1612e3010e0f5833ce5C589921E17a49d214361D (1000 ETH)
+(11) 0x2a38b3638dE4ab29f66CD35a238d8CBA44E82C6D (1000 ETH)
+(12) 0x6800CB2D1EF216993A3b87C69B536B32d1A0D64a (1000 ETH)
+(13) 0x922Ff904C42D609E6Edb01B6AA1DCeF4fb4d3F30 (1000 ETH)
+(14) 0x0AEE79ea52FBd2e64f899d8C88Ae05d7A8C8F554 (1000 ETH)
+(15) 0x37d586b8b6EA8bCe9a3b1AB3523986E6c8cF9555 (1000 ETH)
+(16) 0xEdbF4fC6D12EC81Cb98a42D464269679EEeF81Ab (1000 ETH)
+(17) 0x1133dA993b933cb6a0e8C677Bf62F1DB332AFa57 (1000 ETH)
+(18) 0x7D3F94a34e50e48Ffbb220E8223Df40bcB95A6F4 (1000 ETH)
+(19) 0xF46fF2aC96805e222BDdc91484475E841D86d787 (1000 ETH)
+(20) 0xCfD18e2294e9eA975f725f4E6027987A483173c5 (1000 ETH)
+(21) 0xd60dF899935Ee0131ad255fDC96420566bf4F300 (1000 ETH)
+(22) 0x9359cd457e439b92929a50cE01979e551db82511 (1000 ETH)
+(23) 0x61e08276F9D4A9e02FCB2F770e82B425F1E71ed5 (1000 ETH)
+(24) 0x45E8D0567682b0986eF8634c7755db7d98521Ef7 (1000 ETH)
+(25) 0x412A8F03513e285559a0d70734551a67D852Fed8 (1000 ETH)
+(26) 0xD06A8Af37965aae0200b11d7D70993488bac2AF4 (1000 ETH)
+(27) 0x96a69CBC0d3A47ee45E9545C3B5805eE07C74f96 (1000 ETH)
+(28) 0x06F17B54911d9391184199479f7BD142601F64B9 (1000 ETH)
+(29) 0x4F64fB255bbcb5bdCaad873a5e56EC270B1684b1 (1000 ETH)
+
+Private Keys
+==================
+(0) 0xabf82ff96b463e9d82b83cb9bb450fe87e6166d4db6d7021d0c71d7e960d5abe
+(1) 0xdcb7118c9946a39cd40b661e0d368e4afcc3cc48d21aa750d8164ca2e44961c4
+(2) 0x2d7aaa9b78d759813448eb26483284cd5e4344a17dede2ab7f062f0757113a28
+(3) 0x0e5c6904f09186a0cfe945da201e9d9f0443e07d9e795a9d26cc5cbb882874ac
+(4) 0x7f60d75be8f8833a47311c001adbc3771784c52ea9115200a516e3f050c3bc2b
+(5) 0x949dbd0607598c41478b32c27da65ab550d54246922fa8978a8c1b9e901e06a6
+(6) 0x87a3c9405478581d513a16075038e5869d02311371b757f7163200a09f230f18
+(7) 0xe5faea48461ef5a0b78839573073e5a2f579155bf7a4cceb15e49b41963af6a3
+(8) 0xccfb970ed6f3bb68a15d87a67071da16544c918cf978dc41906e686326bb953d
+(9) 0x27a3706e23375353aabc8da00d59db6795abae3036dee967103088c8f15e5335
+(10) 0x63d9b50bfe8c31512f0726ec5c5a4f82c7a6cce5a37dc66094b0fbb02b4c761b
+(11) 0x9e8af7e046c6e3895da8c7244b873519765cccf585b359ade194588741a4bdfc
+(12) 0xf16c6889261e333af2db8cd9d3fa88c8ef7d0abd4cffff184cd83be080013c4a
+(13) 0x7e5a5a9d091a7ff7f4c4c2a25a0ee70f12f6ca126e81f52524e892fd8530a2e8
+(14) 0x653f30be94baf5489b38cfe7172ea9de06c91d824714bfcd4af4eb141711563c
+(15) 0x8ee57f93511db1ea25b5eb3eafd8ff2bc58d965931b5886bcc006efbbe75643f
+(16) 0x442fd236c4e356a40bdeb078056f3b26982a181f661379b1ecd05c98acd9b756
+(17) 0x5438140c62b65c439bbcfad7313acee0fc2726a6792f9a167513b57d6cac83c9
+(18) 0x8f2e702542c47dfdbf6b427b1413f2ac664acf245dd9677f2801cb5960000fc3
+(19) 0x303cbd9f39b1d44299d79593859813d1ff6556967e1529df47a67960ca7ed3ab
+(20) 0x01539aca71544225ad86f33af201d32eca3677b3d06745dae73916a15d32385e
+(21) 0xfd43f98b844b8bd8649974afbcaf3e808d4d625c5716220cf8bd5745eea62729
+(22) 0x2509613c3752741600ba99a99a5249fd8125272608017975e8c64c45f6642021
+(23) 0x8af79e24ba8eeed44bdbc010841338782045c2d92e85c9cc5a4a7052b3b74ad1
+(24) 0x6aec425d51b5746cd9cfec4a0b75ea36dce2fe82ed58d8b2cbdc81ed6fd6176f
+(25) 0xfd3325569dd4b95aff2a1ce9c618fc2f11f80bde82ac2fea0ff9935c0490aeeb
+(26) 0x24f8a138e3183b2bc66e21d970923f2ad0925791ebdd01ebbb154b7232c8f67d
+(27) 0xe353071f7c256c6c91798e9221b0ab11260729e4ff4ae2d0008d9a680350a091
+(28) 0xd56891a9ef62c709b09be78e17a4562377cea81833735da56207d64b43249098
+(29) 0xba39181941e12e59a02b423d5f179d01f802cd826abe286693a32e120b9c4808
