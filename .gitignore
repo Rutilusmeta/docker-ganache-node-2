@@ -1,5 +1,7 @@
 volume/*
 !volume/run_node.sh
+logs/*
+logs/.gitkeep
 .env
 dockerfiles/*
 !dockerfiles/sys.*
