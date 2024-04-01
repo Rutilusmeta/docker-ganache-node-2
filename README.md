@@ -33,8 +33,6 @@ TEST=true COMMAND="tail -f /dev/null" docker compose --project-name=test up -d
 tail -f logs/output.log
 ```
 
-## Etherium Test Addresses
-
 Available Accounts
 ==================
 (0) 0x959FD7Ef9089B7142B6B908Dc3A8af7Aa8ff0FA1 (1000 ETH)
