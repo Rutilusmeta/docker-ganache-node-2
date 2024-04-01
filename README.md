@@ -25,7 +25,7 @@ docker compose --project-name=ganache up -d --build
 
 It's possible to override environmet variable file while starting or building a container
 ```
-TEST=true COMMAND="tail -f /dev/null" docker compose --project-name=test up -d
+TEST=true COMMAND="tail -f /dev/null" docker compose --project-name=ganache up -d
 ```
 
 ## View Logs
