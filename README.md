@@ -28,6 +28,13 @@ It's possible to override environmet variable file while starting or building a 
 TEST=true COMMAND="tail -f /dev/null" docker compose --project-name=ganache up -d
 ```
 
+## Remote Access
+
+Use ssh tunneling for remote access
+```
+ssh -L 8545:127.0.0.1:8545 {SSH_USER}@{SERVER_ADDRESS} -N
+```
+
 ## View Logs
 ```
 tail -f logs/output.log
