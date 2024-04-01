@@ -1,0 +1,7 @@
+volume/*
+!volume/run_node.sh
+.env
+dockerfiles/*
+!dockerfiles/sys.*
+scripts/*
+!scripts/sys.*

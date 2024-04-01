@@ -1,0 +1,39 @@
+version: '3'
+services:
+  app:
+    container_name: ${CONTAINER_NAME}
+    image: ${DOCKER_IMAGE}
+    restart: ${RESTART}
+    volumes:
+      - type: bind
+        source: ${VOLUME}
+        target: ${WORK_DIR}
+      - type: bind
+        source: ./logs
+        target: /logs
+    build: 
+      context: .
+      dockerfile: ${DOCKER_FILE}
+      args:
+        DOCKER_IMAGE: ${DOCKER_IMAGE}
+        VOLUME: ${VOLUME}
+        WORK_DIR: ${WORK_DIR}
+    environment:
+    - "TEST=${TEST}"
+    - "CONTAINER_NAME=${CONTAINER_NAME}"
+    - "COMMAND=${COMMAND}"
+    - "VOLUME=${VOLUME}"
+    - "DOCKER_IMAGE=${DOCKER_IMAGE}"
+    - "WORK_DIR=${WORK_DIR}"
+    - "TZ=${TIMEZONE}"
+    - "GANACHE_PORT=${GANACHE_PORT}"
+    - "GANACHE_ADDRESS=${GANACHE_ADDRESS}"
+    - "GANACHE_NETWORK_ID=${GANACHE_NETWORK_ID}"
+    logging:
+      driver: "${LOG_DRIVER}"
+      options:
+        tag: "{{.Name}}"
+networks:
+  main:
+    name: ${CONTAINER_NAME}
+    
