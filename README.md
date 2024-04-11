@@ -17,7 +17,6 @@ https://github.com/ground-creative/nft-market-frontend-docker
 Ganache Docker Test Node:
 https://github.com/Rutilusmeta/docker-ganache-node
 
-
 ## Installation
 
 1) Clone the repository
