@@ -14,7 +14,7 @@ services:
         source: ./logs
         target: /logs
     ports:
-      - "${GANACHE_PORT}:${GANACHE_PORT}" 
+      - "127.0.0.1:${GANACHE_PORT}:${GANACHE_PORT}" 
     build: 
       context: .
       dockerfile: ${DOCKER_FILE}
